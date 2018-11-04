@@ -9,6 +9,7 @@ Output: html_document
 ```{r, results='hide', warning=FALSE, message=FALSE}
 library(tidyverse)
 library(gutenbergr)
+library(tidytext)
 ```
 
 Ok, so let's search the "gutenbergr" library for some of the famous stoic thinkers.
@@ -35,7 +36,7 @@ Seneca <- gutenberg_download(gutenberg_id = 3794)
 
 
 ```{r}
-
-
+Aurellius %>% 
+  head(10)
 ```
 
