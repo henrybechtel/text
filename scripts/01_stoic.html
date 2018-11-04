@@ -127,7 +127,8 @@ $(document).ready(function () {
 <div id="an-exploration-of-stoic-writings-using-r" class="section level4">
 <h4>An exploration of Stoic writings using R!</h4>
 <pre class="r"><code>library(tidyverse)
-library(gutenbergr)</code></pre>
+library(gutenbergr)
+library(tidytext)</code></pre>
 <p>Ok, so let’s search the “gutenbergr” library for some of the famous stoic thinkers.</p>
 <pre class="r"><code>works &lt;- gutenberg_works(languages = &quot;en&quot;)
 
@@ -153,6 +154,21 @@ stoicWorks</code></pre>
 <pre class="r"><code>Aurellius &lt;- gutenberg_download(gutenberg_id = 2680)
 Epictetus &lt;- gutenberg_download(gutenberg_id = 10661)
 Seneca &lt;- gutenberg_download(gutenberg_id = 3794)</code></pre>
+<pre class="r"><code>Aurellius %&gt;% 
+  head(10)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    gutenberg_id text              
+##           &lt;int&gt; &lt;chr&gt;             
+##  1         2680 MEDITATIONS       
+##  2         2680 &quot;&quot;                
+##  3         2680 By Marcus Aurelius
+##  4         2680 &quot;&quot;                
+##  5         2680 &quot;&quot;                
+##  6         2680 &quot;&quot;                
+##  7         2680 &quot;&quot;                
+##  8         2680 CONTENTS          
+##  9         2680 &quot;&quot;                
+## 10         2680 &quot;&quot;</code></pre>
 </div>
 
 

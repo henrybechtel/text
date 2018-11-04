@@ -1,0 +1,42 @@
+---
+Title: Stoic Text Analysis
+Author: Henry Bechtel
+Output: html_document  
+---
+
+#### An exploration of Stoic writings using R!
+
+```{r, results='hide', warning=FALSE, message=FALSE}
+library(tidyverse)
+library(gutenbergr)
+library(tidytext)
+```
+
+Ok, so let's search the "gutenbergr" library for some of the famous stoic thinkers.
+
+```{r import text, warning=FALSE}
+
+works <- gutenberg_works(languages = "en")
+
+stoicWorks <- works %>% 
+  filter(str_detect(author, "Aurelius") | str_detect(author, "Epictetus") | str_detect(author, "Seneca")) %>% 
+  select(gutenberg_id, title, author)
+
+stoicWorks
+```
+
+Cool! Looks like we've got some writings from each philosopher. Let's pick one text per author to look at more closely.
+
+```{r message=FALSE, warning=FALSE}
+Aurellius <- gutenberg_download(gutenberg_id = 2680)
+Epictetus <- gutenberg_download(gutenberg_id = 10661)
+Seneca <- gutenberg_download(gutenberg_id = 3794)
+```
+
+
+
+```{r}
+Aurellius %>% 
+  head(10)
+```
+
