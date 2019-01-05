@@ -1,4 +1,4 @@
-﻿The Meditations
+The Meditations
 By Marcus Aurelius
 
 
@@ -474,7 +474,7 @@ This in Carnuntum.
 
 BOOK THREE
 
-We ught to consider not only that our life is daily wasting away
+We ought to consider not only that our life is daily wasting away
 and a smaller part of it is left, but another thing also must be taken
 into the account, that if a man should live longer, it is quite uncertain
 whether the understanding will still continue sufficient for the comprehension
